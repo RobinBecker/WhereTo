@@ -22,13 +22,13 @@
 
     <style name="buttonEnabled">
         <item name="android:fontFamily">@font/raleway_semibold</item>
-        <item name="android:textSize">17pt</item>
+        <item name="android:textSize">8pt</item>
         <item name="android:textColor">@color/colorBackground</item>
     </style>
 
     <style name="buttonDisabled">
         <item name="android:fontFamily">@font/raleway_semibold</item>
-        <item name="android:textSize">17pt</item>
+        <item name="android:textSize">10pt</item>
         <item name="android:textColor">@color/colorMainText</item>
     </style>
 
@@ -40,7 +40,7 @@
 
     <style name="description">
         <item name="android:fontFamily">@font/raleway</item>
-        <item name="android:textSize">13pt</item>
+        <item name="android:textSize">8pt</item>
         <item name="android:textColor">@color/colorMainText</item>
     </style>
 
@@ -48,6 +48,12 @@
         <item name="android:fontFamily">@font/raleway_semibold</item>
         <item name="android:textSize">15pt</item>
         <item name="android:textColor">@color/colorPrimaryVariant</item>
+    </style>
+
+    <style name="clickableString">
+        <item name="android:fontFamily">@font/raleway</item>
+        <item name="android:textSize">8pt</item>
+        <item name="android:textColor">@color/colorSecondary</item>
     </style>
 
 </resources>
