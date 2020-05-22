@@ -7,4 +7,9 @@
     <string name="_60_km">60 km</string>
     <string name="_80_km">80 km</string>
     <string name="restaurant_suchen">Zufälliges Restaurant suchen</string>
+    <string name="km">km</string>
+    <string name="filter">Filter anpassen</string>
+    <string name="restaurantListe_anzeigen">Restaurantliste anzeigen</string>
+    <string name="letzte_treffer">Letzte Treffer</string>
+    <string name="mehr_anzeigen">mehr anzeigen</string>
 </resources>
