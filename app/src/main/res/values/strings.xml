@@ -12,4 +12,26 @@
     <string name="restaurantListe_anzeigen">Restaurantliste anzeigen</string>
     <string name="letzte_treffer">Letzte Treffer</string>
     <string name="mehr_anzeigen">mehr anzeigen</string>
+    <string name="filter_anwenden">Filter anwenden</string>
+    <string name="art">Art</string>
+    <string name="kueche">Küche</string>
+    <string name="preis">Preis</string>
+    <string-array name="art_array">
+        <item>beliebig</item>
+        <item>vegetarisch</item>
+        <item>vegan</item>
+    </string-array>
+    <string-array name="preis_array">
+        <item>beliebig</item>
+        <item>niedrig</item>
+        <item>mittel</item>
+        <item>hoch</item>
+    </string-array>
+    <string-array name="kueche_array">
+        <item>Italienisch</item>
+        <item>Spanisch</item>
+        <item>Mexikanisch</item>
+        <item>Deutsch</item>
+        <item>Asiatisch</item>
+    </string-array>
 </resources>
