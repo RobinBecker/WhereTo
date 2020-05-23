@@ -35,6 +35,7 @@
     <string name="asiatisch">Asiatisch</string>
     <string name="todo">TODO</string>
     <string name="back_arrow">Back Arrow</string>
+    <string name="open" />
     <string-array name="art_array">
         <item>beliebig</item>
         <item>vegetarisch</item>

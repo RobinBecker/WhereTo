@@ -33,12 +33,6 @@
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="21dp"
                 android:src="@mipmap/logoinvert" />
-
-            <ImageView
-                android:layout_width="45dp"
-                android:layout_height="42dp"
-                android:layout_alignParentLeft="true"
-                android:src="@mipmap/menu" />
         </RelativeLayout>
         </androidx.appcompat.widget.Toolbar>
         <FrameLayout
