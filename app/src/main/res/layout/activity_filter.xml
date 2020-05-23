@@ -81,7 +81,8 @@
         android:stepSize="20"
         android:thumbTint="@android:color/white"
         tools:layout_editor_absoluteX="10dp"
-        tools:layout_editor_absoluteY="158dp" />
+        tools:layout_editor_absoluteY="158dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView"
@@ -91,7 +92,8 @@
         android:labelFor="@id/slider"
         android:text="@string/umkreis"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="107dp" />
+        tools:layout_editor_absoluteY="107dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView2"
@@ -102,7 +104,8 @@
         android:labelFor="@id/slider"
         android:text="@string/km"
         tools:layout_editor_absoluteX="265dp"
-        tools:layout_editor_absoluteY="107dp" />
+        tools:layout_editor_absoluteY="107dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView3"
@@ -111,16 +114,22 @@
         android:layout_height="29dp"
         android:text="@string/art"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="207dp" />
+        tools:layout_editor_absoluteY="207dp"
+        tools:ignore="MissingConstraints" />
 
     <Spinner
         android:id="@+id/dropdown_art"
         android:layout_width="222dp"
-        android:layout_height="35dp"
-        android:background="@android:drawable/btn_dropdown"
+        android:layout_height="29dp"
+        android:background="@drawable/shape_dropdown"
         android:spinnerMode="dropdown"
+        android:drawSelectorOnTop="true"
+        android:padding="5dp"
+        android:theme="@style/dropdown_text"
+        android:entries="@array/art_array"
         tools:layout_editor_absoluteX="156dp"
-        tools:layout_editor_absoluteY="207dp" />
+        tools:layout_editor_absoluteY="207dp"
+        tools:ignore="MissingConstraints,SmallSp" />
 
     <TextView
         android:id="@+id/textView4"
@@ -129,7 +138,8 @@
         android:layout_height="29dp"
         android:text="@string/kueche"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="307dp" />
+        tools:layout_editor_absoluteY="307dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView5"
@@ -138,6 +148,21 @@
         android:layout_height="29dp"
         android:text="@string/preis"
         tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="407dp"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/dropdown_preis"
+        android:layout_width="222dp"
+        android:layout_height="29dp"
+        android:background="@drawable/shape_dropdown"
+        android:drawSelectorOnTop="true"
+        android:entries="@array/preis_array"
+        android:padding="5dp"
+        android:spinnerMode="dropdown"
+        android:theme="@style/dropdown_text"
+        tools:ignore="MissingConstraints,SmallSp"
+        tools:layout_editor_absoluteX="156dp"
         tools:layout_editor_absoluteY="407dp" />
 
     <Button
@@ -149,7 +174,8 @@
         android:layout_width="182dp"
         android:layout_height="45dp"
         tools:layout_editor_absoluteX="114dp"
-        tools:layout_editor_absoluteY="512dp" />
+        tools:layout_editor_absoluteY="512dp"
+        tools:ignore="MissingConstraints" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
