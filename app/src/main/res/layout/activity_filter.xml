@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -15,7 +16,8 @@
         tools:layout_editor_absoluteX="13dp"
         tools:layout_editor_absoluteY="130dp"
         android:orientation="horizontal"
-        android:weightSum="5">
+        android:weightSum="5"
+        tools:ignore="MissingConstraints">
 
         <TextView
             style="@style/paragraph"
@@ -66,6 +68,7 @@
             android:gravity="center"
             android:text="@string/_100_km"
             android:textSize="14sp" />
+
     </LinearLayout>
 
     <SeekBar
@@ -105,7 +108,7 @@
         android:text="@string/km"
         tools:layout_editor_absoluteX="265dp"
         tools:layout_editor_absoluteY="107dp"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints,RtlHardcoded" />
 
     <TextView
         android:id="@+id/textView3"
@@ -142,23 +145,26 @@
         tools:ignore="MissingConstraints" />
 
     <RadioGroup
-        android:layout_width="211dp"
-        android:layout_height="130dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         tools:layout_editor_absoluteX="167dp"
         tools:layout_editor_absoluteY="258dp"
         android:orientation="vertical"
         tools:ignore="MissingConstraints">
-        <RadioButton android:id="@+id/radio_pirates"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:checked="true"
-            android:text="italienisch"
-            android:onClick="onRadioButtonClicked"/>
-        <RadioButton android:id="@+id/radio_ninjas"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="chinesich"
-            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton
+            android:id="@+id/radio_italienisch"
+            android:layout_width="97dp"
+            android:layout_height="20dp"
+            android:buttonTint="@color/colorSignal"
+            android:padding="5dp" />
+
+        <RadioButton
+            android:id="@+id/radio_italienisch2"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="@string/italienisch" />
+
     </RadioGroup>
 
     <TextView

@@ -16,6 +16,7 @@
     <string name="art">Art</string>
     <string name="kueche">Küche</string>
     <string name="preis">Preis</string>
+    <string name="italienisch">Italienisch</string>
     <string-array name="art_array">
         <item>beliebig</item>
         <item>vegetarisch</item>
