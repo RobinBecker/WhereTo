@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
         toolbar?.title = "Toolbar"
-        toolbar?.navigationIcon = ContextCompat.getDrawable(this,R.drawable.icon_menu)
+        toolbar?.navigationIcon = ContextCompat.getDrawable(this,R.drawable.ic_menu)
         toolbar?.setNavigationOnClickListener { Toast.makeText(applicationContext,"Navigation icon was clicked",
             Toast.LENGTH_SHORT).show() }
 
