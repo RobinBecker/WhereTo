@@ -141,6 +141,26 @@
         tools:layout_editor_absoluteY="307dp"
         tools:ignore="MissingConstraints" />
 
+    <RadioGroup
+        android:layout_width="211dp"
+        android:layout_height="130dp"
+        tools:layout_editor_absoluteX="167dp"
+        tools:layout_editor_absoluteY="258dp"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+        <RadioButton android:id="@+id/radio_pirates"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="italienisch"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton android:id="@+id/radio_ninjas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="chinesich"
+            android:onClick="onRadioButtonClicked"/>
+    </RadioGroup>
+
     <TextView
         android:id="@+id/textView5"
         style="@style/description"
@@ -175,6 +195,14 @@
         android:layout_height="45dp"
         tools:layout_editor_absoluteX="114dp"
         tools:layout_editor_absoluteY="512dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:background="@drawable/back_button"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="670dp"
         tools:ignore="MissingConstraints" />
 
 
