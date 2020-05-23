@@ -11,4 +11,39 @@
     <string name="Impressium" />
     <string name="menu">menu</string>
     <string name="logo" />
+    <string name="umkreis">Umkreis</string>
+    <string name="_100_km">100 km</string>
+    <string name="_20_km">20 km</string>
+    <string name="_40_km">40 km</string>
+    <string name="_60_km">60 km</string>
+    <string name="_80_km">80 km</string>
+    <string name="restaurant_suchen">Zufälliges Restaurant suchen</string>
+    <string name="km">km</string>
+    <string name="filter">Filter anpassen</string>
+    <string name="restaurantListe_anzeigen">Restaurantliste anzeigen</string>
+    <string name="letzte_treffer">Letzte Treffer</string>
+    <string name="mehr_anzeigen">mehr anzeigen</string>
+    <string name="filter_anwenden">Filter anwenden</string>
+    <string name="art">Art</string>
+    <string name="kueche">Küche</string>
+    <string name="preis">Preis</string>
+    <string name="italienisch">Italienisch</string>
+    <string name="spanisch">Spanisch</string>
+    <string name="mexikanisch">Mexikanisch</string>
+    <string name="deutsch">Deutsch</string>
+    <string name="t_rkisch">Türkisch</string>
+    <string name="asiatisch">Asiatisch</string>
+    <string name="todo">TODO</string>
+    <string name="back_arrow">Back Arrow</string>
+    <string-array name="art_array">
+        <item>beliebig</item>
+        <item>vegetarisch</item>
+        <item>vegan</item>
+    </string-array>
+    <string-array name="preis_array">
+        <item>beliebig</item>
+        <item>niedrig</item>
+        <item>mittel</item>
+        <item>hoch</item>
+    </string-array>
 </resources>
