@@ -22,6 +22,8 @@
     <string name="deutsch">Deutsch</string>
     <string name="t_rkisch">Türkisch</string>
     <string name="asiatisch">Asiatisch</string>
+    <string name="todo">TODO</string>
+    <string name="back_arrow">Back Arrow</string>
     <string-array name="art_array">
         <item>beliebig</item>
         <item>vegetarisch</item>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -234,15 +233,15 @@
 
     <Button
         style="@style/buttonEnabled"
+        android:layout_width="182dp"
+        android:layout_height="45dp"
         android:background="@drawable/shape_button_filter"
         android:elevation="8dp"
         android:gravity="center_vertical|center_horizontal"
         android:text="@string/filter_anwenden"
-        android:layout_width="182dp"
-        android:layout_height="45dp"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="114dp"
-        tools:layout_editor_absoluteY="512dp"
-        tools:ignore="MissingConstraints" />
+        tools:layout_editor_absoluteY="562dp" />
 
     <ImageButton
         android:layout_width="45dp"
@@ -250,7 +249,8 @@
         android:background="@drawable/back_button"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="670dp"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        android:contentDescription="@string/back_arrow" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
