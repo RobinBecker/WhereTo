@@ -17,6 +17,11 @@
     <string name="kueche">Küche</string>
     <string name="preis">Preis</string>
     <string name="italienisch">Italienisch</string>
+    <string name="spanisch">Spanisch</string>
+    <string name="mexikanisch">Mexikanisch</string>
+    <string name="deutsch">Deutsch</string>
+    <string name="t_rkisch">Türkisch</string>
+    <string name="asiatisch">Asiatisch</string>
     <string-array name="art_array">
         <item>beliebig</item>
         <item>vegetarisch</item>
@@ -27,12 +32,5 @@
         <item>niedrig</item>
         <item>mittel</item>
         <item>hoch</item>
-    </string-array>
-    <string-array name="kueche_array">
-        <item>Italienisch</item>
-        <item>Spanisch</item>
-        <item>Mexikanisch</item>
-        <item>Deutsch</item>
-        <item>Asiatisch</item>
     </string-array>
 </resources>

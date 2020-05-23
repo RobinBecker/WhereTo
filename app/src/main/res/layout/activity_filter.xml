@@ -145,25 +145,66 @@
         tools:ignore="MissingConstraints" />
 
     <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="167dp"
-        tools:layout_editor_absoluteY="258dp"
+        android:layout_width="129dp"
+        android:layout_height="100dp"
         android:orientation="vertical"
-        tools:ignore="MissingConstraints">
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="156dp"
+        tools:layout_editor_absoluteY="273dp">
 
         <RadioButton
             android:id="@+id/radio_italienisch"
-            android:layout_width="97dp"
-            android:layout_height="20dp"
-            android:buttonTint="@color/colorSignal"
-            android:padding="5dp" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_radio_button"
+            android:checked="true"
+
+            android:text="@string/italienisch" />
 
         <RadioButton
-            android:id="@+id/radio_italienisch2"
+            android:id="@+id/radio_spanisch"
             android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:text="@string/italienisch" />
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_radio_button"
+            android:text="@string/spanisch" />
+
+        <RadioButton
+            android:id="@+id/radio_mexikanisch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_radio_button"
+            android:text="@string/mexikanisch" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:layout_width="129dp"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="280dp"
+        tools:layout_editor_absoluteY="273dp">
+
+        <RadioButton
+            android:id="@+id/radio_deutsch"
+            android:layout_width="97dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_radio_button"
+            android:text="@string/deutsch" />
+
+        <RadioButton
+            android:id="@+id/radio_asiatisch"
+            android:layout_width="97dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_radio_button"
+            android:text="@string/asiatisch" />
+
+        <RadioButton
+            android:id="@+id/radio_türkisch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_radio_button"
+            android:text="@string/t_rkisch" />
 
     </RadioGroup>
 
@@ -203,7 +244,7 @@
         tools:layout_editor_absoluteY="512dp"
         tools:ignore="MissingConstraints" />
 
-    <Button
+    <ImageButton
         android:layout_width="45dp"
         android:layout_height="45dp"
         android:background="@drawable/back_button"
