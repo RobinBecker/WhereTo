@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground">
+
+    <Button
+        android:id="@+id/reserve_restaurant"
+        style="@style/buttonEnabled"
+        android:layout_width="196dp"
+        android:layout_height="46dp"
+        android:background="@drawable/shape_button"
+        android:elevation="8dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="@string/plaetze_reservieren"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="107dp"
+        tools:layout_editor_absoluteY="495dp" />
+
+    <Button
+        android:id="@+id/invite_friends"
+        style="@style/buttonEnabled"
+        android:layout_width="196dp"
+        android:layout_height="46dp"
+        android:background="@drawable/shape_button"
+        android:elevation="8dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="@string/freunde_einladen"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="107dp"
+        tools:layout_editor_absoluteY="568dp" />
+
+    <ImageButton
+        android:id="@+id/back_button"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:background="@drawable/back_button"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="670dp"
+        tools:ignore="MissingConstraints"
+        android:contentDescription="@string/back_arrow" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
