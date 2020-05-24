@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/colorBackground">
+
 
     <LinearLayout
         android:id="@+id/layout_seekbar_interval_holder"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        tools:layout_editor_absoluteX="13dp"
-        tools:layout_editor_absoluteY="330dp"
         android:orientation="horizontal"
-        android:weightSum="5">
+        android:weightSum="5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:layout_editor_absoluteX="16dp">
 
         <TextView
             style="@style/paragraph"
@@ -73,6 +73,7 @@
         style="@android:style/Widget.Material.SeekBar"
         android:layout_width="385dp"
         android:layout_height="15dp"
+        android:layout_marginEnd="16dp"
         android:max="100"
         android:paddingTop="3dp"
         android:paddingBottom="3dp"
@@ -80,92 +81,109 @@
         android:progressDrawable="@drawable/shape_seekbar"
         android:stepSize="20"
         android:thumbTint="@android:color/white"
-        tools:layout_editor_absoluteX="10dp"
-        tools:layout_editor_absoluteY="358dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_seekbar_interval_holder" />
 
     <TextView
         android:id="@+id/textView"
         style="@style/description"
         android:layout_width="130dp"
         android:layout_height="29dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="184dp"
         android:labelFor="@id/slider"
         android:text="@string/umkreis"
-        tools:layout_editor_absoluteX="25dp"
-        tools:layout_editor_absoluteY="307dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/random" />
 
     <TextView
         android:id="@+id/textView3"
         style="@style/description"
         android:layout_width="130dp"
         android:layout_height="29dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="88dp"
         android:labelFor="@id/slider"
         android:text="@string/letzte_treffer"
-        tools:layout_editor_absoluteX="25dp"
-        tools:layout_editor_absoluteY="543dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/show_restaurant" />
 
     <TextView
         android:id="@+id/textView2"
         style="@style/description"
-        android:gravity="right"
         android:layout_width="130dp"
         android:layout_height="29dp"
+        android:layout_marginStart="264dp"
+        android:layout_marginTop="184dp"
+        android:gravity="right"
         android:labelFor="@id/slider"
         android:text="@string/km"
-        tools:layout_editor_absoluteX="265dp"
-        tools:layout_editor_absoluteY="307dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/random"
+        tools:ignore="RtlHardcoded" />
 
     <Button
         android:id="@+id/random"
         style="@style/buttonEnabled"
         android:layout_width="150dp"
         android:layout_height="150dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="116dp"
         android:background="@drawable/shape_button_random"
         android:elevation="8dp"
         android:gravity="center_vertical|center_horizontal"
         android:text="@string/restaurant_suchen"
-        tools:layout_editor_absoluteX="130dp"
-        tools:layout_editor_absoluteY="108dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/filter"
         style="@style/clickableString"
-        android:clickable="true"
-        android:focusable="true"
         android:layout_width="182dp"
         android:layout_height="45dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="64dp"
+        android:clickable="true"
+        android:focusable="true"
         android:gravity="center_vertical|center_horizontal"
         android:text="@string/filter"
-        tools:layout_editor_absoluteX="130dp"
-        tools:layout_editor_absoluteY="417dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/slider" />
 
     <TextView
         android:id="@+id/show_more"
         style="@style/clickableString"
         android:layout_width="130dp"
         android:layout_height="29dp"
+        android:layout_marginStart="256dp"
+        android:layout_marginTop="88dp"
         android:clickable="true"
         android:focusable="true"
         android:gravity="center_vertical|center_horizontal"
         android:text="@string/mehr_anzeigen"
-        tools:layout_editor_absoluteX="265dp"
-        tools:layout_editor_absoluteY="543dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/show_restaurant" />
 
     <TextView
         android:id="@+id/show_restaurant"
         style="@style/clickableString"
         android:layout_width="244dp"
         android:layout_height="43dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="44dp"
         android:clickable="true"
         android:focusable="true"
         android:gravity="center_vertical|center_horizontal"
         android:text="@string/restaurantListe_anzeigen"
-        tools:layout_editor_absoluteX="96dp"
-        tools:layout_editor_absoluteY="462dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/filter" />
 
     <TextView
         android:layout_width="369dp"
         android:layout_height="96dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="140dp"
         android:background="@android:color/darker_gray"
-        tools:layout_editor_absoluteX="26dp"
-        tools:layout_editor_absoluteY="590dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/show_restaurant" />
 </androidx.constraintlayout.widget.ConstraintLayout>

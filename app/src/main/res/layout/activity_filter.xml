@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/colorBackground">
 
     <LinearLayout
@@ -12,11 +12,11 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        tools:layout_editor_absoluteX="13dp"
         tools:layout_editor_absoluteY="130dp"
         android:orientation="horizontal"
         android:weightSum="5"
-        tools:ignore="MissingConstraints">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
 
         <TextView
             style="@style/paragraph"
@@ -82,74 +82,79 @@
         android:progressDrawable="@drawable/shape_seekbar"
         android:stepSize="20"
         android:thumbTint="@android:color/white"
-        tools:layout_editor_absoluteX="10dp"
-        tools:layout_editor_absoluteY="158dp"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_seekbar_interval_holder" />
 
     <TextView
         android:id="@+id/textView"
         style="@style/description"
         android:layout_width="130dp"
         android:layout_height="29dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="112dp"
         android:labelFor="@id/slider"
         android:text="@string/umkreis"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="107dp"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView2"
         style="@style/description"
         android:layout_width="130dp"
         android:layout_height="29dp"
-        android:gravity="right"
+        android:layout_marginStart="264dp"
+        android:layout_marginTop="112dp"
+        android:gravity="end"
         android:labelFor="@id/slider"
         android:text="@string/km"
-        tools:layout_editor_absoluteX="265dp"
-        tools:layout_editor_absoluteY="107dp"
-        tools:ignore="MissingConstraints,RtlHardcoded" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView3"
         style="@style/description"
         android:layout_width="130dp"
         android:layout_height="29dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="216dp"
         android:text="@string/art"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="207dp"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
         android:id="@+id/dropdown_art"
         android:layout_width="222dp"
         android:layout_height="29dp"
+        android:layout_marginStart="172dp"
+        android:layout_marginTop="216dp"
         android:background="@drawable/shape_dropdown"
-        android:spinnerMode="dropdown"
         android:drawSelectorOnTop="true"
-        android:padding="5dp"
-        android:theme="@style/dropdown_text"
         android:entries="@array/art_array"
-        tools:layout_editor_absoluteX="156dp"
-        tools:layout_editor_absoluteY="207dp"
-        tools:ignore="MissingConstraints,SmallSp" />
+        android:padding="5dp"
+        android:spinnerMode="dropdown"
+        android:theme="@style/dropdown_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView4"
         style="@style/description"
         android:layout_width="130dp"
         android:layout_height="29dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="304dp"
         android:text="@string/kueche"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="307dp"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <RadioGroup
+        android:id="@+id/radioGroup2"
         android:layout_width="129dp"
         android:layout_height="100dp"
+        android:layout_marginTop="28dp"
         android:orientation="vertical"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="156dp"
-        tools:layout_editor_absoluteY="273dp">
+        app:layout_constraintStart_toStartOf="@+id/dropdown_art"
+        app:layout_constraintTop_toBottomOf="@+id/dropdown_art">
 
         <RadioButton
             android:id="@+id/radio_italienisch"
@@ -177,12 +182,13 @@
     </RadioGroup>
 
     <RadioGroup
+        android:id="@+id/radioGroup"
         android:layout_width="129dp"
         android:layout_height="100dp"
         android:orientation="vertical"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="280dp"
-        tools:layout_editor_absoluteY="273dp">
+        app:layout_constraintBottom_toTopOf="@+id/dropdown_preis"
+        app:layout_constraintStart_toEndOf="@+id/radioGroup2"
+        app:layout_constraintTop_toBottomOf="@+id/dropdown_art">
 
         <RadioButton
             android:id="@+id/radio_deutsch"
@@ -212,45 +218,49 @@
         style="@style/description"
         android:layout_width="130dp"
         android:layout_height="29dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="416dp"
         android:text="@string/preis"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="407dp"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
         android:id="@+id/dropdown_preis"
         android:layout_width="222dp"
         android:layout_height="29dp"
+        android:layout_marginStart="172dp"
+        android:layout_marginTop="416dp"
         android:background="@drawable/shape_dropdown"
         android:drawSelectorOnTop="true"
         android:entries="@array/preis_array"
         android:padding="5dp"
         android:spinnerMode="dropdown"
         android:theme="@style/dropdown_text"
-        tools:ignore="MissingConstraints,SmallSp"
-        tools:layout_editor_absoluteX="156dp"
-        tools:layout_editor_absoluteY="407dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         style="@style/buttonEnabled"
         android:layout_width="182dp"
         android:layout_height="45dp"
-        android:background="@drawable/shape_button_filter"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="560dp"
+        android:background="@drawable/shape_button"
         android:elevation="8dp"
         android:gravity="center_vertical|center_horizontal"
         android:text="@string/filter_anwenden"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="114dp"
-        tools:layout_editor_absoluteY="562dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:layout_width="45dp"
         android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="668dp"
         android:background="@drawable/back_button"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="670dp"
-        tools:ignore="MissingConstraints"
-        android:contentDescription="@string/back_arrow" />
+        android:contentDescription="@string/back_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
