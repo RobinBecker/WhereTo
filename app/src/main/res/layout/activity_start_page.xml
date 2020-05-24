@@ -6,11 +6,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/colorBackground">
 
-    <include
-        android:id="@+id/toolbar"
-        android:layout="@layout/activity_main"
-        tools:layout_editor_absoluteX="-36dp"
-        tools:layout_editor_absoluteY="35dp" />
 
     <LinearLayout
         android:id="@+id/layout_seekbar_interval_holder"
@@ -139,7 +134,7 @@
         android:gravity="center_vertical|center_horizontal"
         android:text="@string/restaurant_suchen"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/toolbar" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/filter"
