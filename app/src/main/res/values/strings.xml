@@ -24,6 +24,19 @@
     <string name="asiatisch">Asiatisch</string>
     <string name="todo">TODO</string>
     <string name="back_arrow">Back Arrow</string>
+    <string name="kontakt">Kontakt</string>
+    <string name="strasse">Straße, Hausnummer</string>
+    <string name="ort">PLZ, Ort</string>
+    <string name="telefon">Telefonnummer</string>
+    <string name="termin">Termin</string>
+    <string name="anzahl">Anzahl</string>
+    <string name="reservieren">Plätze reservieren</string>
+    <string-array name="termin_array">
+        <item>Termin wählen...</item>
+        <item>Datum1</item>
+        <item>Datum2</item>
+        <item>Datum3</item>
+    </string-array>
     <string-array name="art_array">
         <item>beliebig</item>
         <item>vegetarisch</item>
