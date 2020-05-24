@@ -1,5 +1,16 @@
 <resources>
     <string name="app_name">WhereTo</string>
+    <string name="suche">Suche</string>
+    <string name="reservierungen">Reservierungen</string>
+    <string name="chat">Chat</string>
+    <string name="bewertungen">Bewertungen</string>
+    <string name="einstellungen">Einstellungen</string>
+    <string name="impressium">Impressium</string>
+    <string name="abmelden">Abmelden</string>
+    <string name="max_mustermann">Max Mustermann</string>
+    <string name="Impressium" />
+    <string name="menu">menu</string>
+    <string name="logo" />
     <string name="umkreis">Umkreis</string>
     <string name="_100_km">100 km</string>
     <string name="_20_km">20 km</string>
@@ -29,6 +40,7 @@
     <string name="restaurant_name">Restaurant Name</string>
     <string name="strasse">Straße</string>
     <string name="plz_und_stadt">PLZ und Stadt</string>
+    <string name="open" />
     <string-array name="art_array">
         <item>beliebig</item>
         <item>vegetarisch</item>
