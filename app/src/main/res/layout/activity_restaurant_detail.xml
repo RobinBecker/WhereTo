@@ -42,4 +42,42 @@
         tools:ignore="MissingConstraints"
         android:contentDescription="@string/back_arrow" />
 
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="324dp"
+        android:layout_height="259dp"
+        tools:layout_editor_absoluteX="43dp"
+        tools:layout_editor_absoluteY="75dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/resturant_name"
+        style="@style/clickableString"
+        android:layout_width="324dp"
+        android:layout_height="27dp"
+        android:text="@string/restaurant_name"
+        tools:layout_editor_absoluteX="43dp"
+        tools:layout_editor_absoluteY="352dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/restaurant_strasse"
+        style="@style/description"
+        android:layout_width="324dp"
+        android:layout_height="27dp"
+        android:text="@string/strasse"
+        tools:layout_editor_absoluteX="43dp"
+        tools:layout_editor_absoluteY="404dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/restaurant_plz"
+        style="@style/description"
+        android:layout_width="324dp"
+        android:layout_height="27dp"
+        android:text="@string/plz_und_stadt"
+        tools:layout_editor_absoluteX="43dp"
+        tools:layout_editor_absoluteY="431dp"
+        tools:ignore="MissingConstraints" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

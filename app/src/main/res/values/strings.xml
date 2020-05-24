@@ -26,6 +26,9 @@
     <string name="back_arrow">Back Arrow</string>
     <string name="freunde_einladen">Freunde einladen</string>
     <string name="plaetze_reservieren">Plätze reservieren</string>
+    <string name="restaurant_name">Restaurant Name</string>
+    <string name="strasse">Straße</string>
+    <string name="plz_und_stadt">PLZ und Stadt</string>
     <string-array name="art_array">
         <item>beliebig</item>
         <item>vegetarisch</item>
