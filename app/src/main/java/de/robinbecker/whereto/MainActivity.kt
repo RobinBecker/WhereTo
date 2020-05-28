@@ -44,10 +44,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 Toast.makeText(this, "Search clicked", Toast.LENGTH_SHORT).show()
             }
             R.id.nav_settings -> {
-                Toast.makeText(this, "Settings clicked", Toast.LENGTH_SHORT).show()
+                setContentView(R.layout.activity_filter)
             }
             R.id.nav_chat -> {
-                Toast.makeText(this, "Chat clicked", Toast.LENGTH_SHORT).show()
+                setContentView(R.layout.activity_restaurant_detail)
             }
             R.id.nav_reservations -> {
               // reservationsList = ReservationsListFragment()
