@@ -73,7 +73,6 @@
         style="@android:style/Widget.Material.SeekBar"
         android:layout_width="385dp"
         android:layout_height="15dp"
-        android:layout_marginEnd="16dp"
         android:max="100"
         android:paddingTop="3dp"
         android:paddingBottom="3dp"
@@ -101,8 +100,8 @@
         style="@style/description"
         android:layout_width="130dp"
         android:layout_height="29dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="108dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="104dp"
         android:labelFor="@id/slider"
         android:text="@string/letzte_treffer"
         app:layout_constraintStart_toStartOf="parent"
@@ -113,7 +112,7 @@
         style="@style/description"
         android:layout_width="130dp"
         android:layout_height="29dp"
-        android:layout_marginStart="264dp"
+        android:layout_marginStart="244dp"
         android:layout_marginTop="184dp"
         android:gravity="right"
         android:labelFor="@id/slider"
@@ -153,15 +152,15 @@
     <TextView
         android:id="@+id/show_more"
         style="@style/clickableString"
-        android:layout_width="130dp"
+        android:layout_width="215dp"
         android:layout_height="29dp"
-        android:layout_marginStart="264dp"
-        android:layout_marginTop="108dp"
+        android:layout_marginStart="192dp"
+        android:layout_marginTop="104dp"
         android:clickable="true"
         android:focusable="true"
         android:gravity="center_vertical|center_horizontal"
         android:text="@string/mehr_anzeigen"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
         app:layout_constraintTop_toTopOf="@id/show_restaurant" />
 
     <TextView
@@ -179,9 +178,10 @@
         app:layout_constraintTop_toTopOf="@id/filter" />
 
     <TextView
-        android:layout_width="369dp"
-        android:layout_height="96dp"
-        android:layout_marginStart="24dp"
+        android:id="@+id/textView6"
+        android:layout_width="357dp"
+        android:layout_height="105dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="136dp"
         android:background="@android:color/darker_gray"
         app:layout_constraintStart_toStartOf="parent"

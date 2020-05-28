@@ -102,7 +102,7 @@
         style="@style/description"
         android:layout_width="130dp"
         android:layout_height="29dp"
-        android:layout_marginStart="264dp"
+        android:layout_marginStart="256dp"
         android:layout_marginTop="112dp"
         android:gravity="end"
         android:labelFor="@id/slider"
@@ -125,7 +125,7 @@
         android:id="@+id/dropdown_art"
         android:layout_width="222dp"
         android:layout_height="29dp"
-        android:layout_marginStart="172dp"
+        android:layout_marginStart="144dp"
         android:layout_marginTop="216dp"
         android:background="@drawable/shape_dropdown"
         android:drawSelectorOnTop="true"
@@ -142,15 +142,15 @@
         android:layout_width="130dp"
         android:layout_height="29dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="304dp"
+        android:layout_marginTop="332dp"
         android:text="@string/kueche"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <RadioGroup
         android:id="@+id/radioGroup2"
-        android:layout_width="129dp"
-        android:layout_height="100dp"
+        android:layout_width="126dp"
+        android:layout_height="141dp"
         android:layout_marginTop="28dp"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="@+id/dropdown_art"
@@ -158,57 +158,55 @@
 
         <RadioButton
             android:id="@+id/radio_italienisch"
+            style="@style/radioButtonStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/shape_radio_button"
             android:checked="true"
-
             android:text="@string/italienisch" />
 
         <RadioButton
             android:id="@+id/radio_spanisch"
+            style="@style/radioButtonStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/shape_radio_button"
             android:text="@string/spanisch" />
 
         <RadioButton
             android:id="@+id/radio_mexikanisch"
+            style="@style/radioButtonStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/shape_radio_button"
             android:text="@string/mexikanisch" />
 
     </RadioGroup>
 
     <RadioGroup
         android:id="@+id/radioGroup"
-        android:layout_width="129dp"
-        android:layout_height="100dp"
+        android:layout_width="124dp"
+        android:layout_height="141dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/dropdown_preis"
         app:layout_constraintStart_toEndOf="@+id/radioGroup2"
-        app:layout_constraintTop_toBottomOf="@+id/dropdown_art">
+        app:layout_constraintTop_toTopOf="@+id/radioGroup2">
 
         <RadioButton
             android:id="@+id/radio_deutsch"
-            android:layout_width="97dp"
+            style="@style/radioButtonStyle"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/shape_radio_button"
             android:text="@string/deutsch" />
 
         <RadioButton
             android:id="@+id/radio_asiatisch"
-            android:layout_width="97dp"
+            style="@style/radioButtonStyle"
+            android:layout_width="117dp"
             android:layout_height="wrap_content"
-            android:background="@drawable/shape_radio_button"
             android:text="@string/asiatisch" />
 
         <RadioButton
             android:id="@+id/radio_türkisch"
+            style="@style/radioButtonStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/shape_radio_button"
             android:text="@string/t_rkisch" />
 
     </RadioGroup>
@@ -218,8 +216,8 @@
         style="@style/description"
         android:layout_width="130dp"
         android:layout_height="29dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="416dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="444dp"
         android:text="@string/preis"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -228,8 +226,8 @@
         android:id="@+id/dropdown_preis"
         android:layout_width="222dp"
         android:layout_height="29dp"
-        android:layout_marginStart="172dp"
-        android:layout_marginTop="416dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="444dp"
         android:background="@drawable/shape_dropdown"
         android:drawSelectorOnTop="true"
         android:entries="@array/preis_array"
@@ -256,7 +254,7 @@
         android:layout_width="45dp"
         android:layout_height="45dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="668dp"
+        android:layout_marginTop="624dp"
         android:background="@drawable/back_button"
         android:contentDescription="@string/back_arrow"
         app:layout_constraintStart_toStartOf="parent"

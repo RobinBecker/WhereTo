@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
@@ -80,6 +80,14 @@
         <item name="android:fontStyle">normal</item>
         <item name="android:textColor">@color/colorMainText</item>
         <item name="android:textSize">5pt</item>
+    </style>
+
+    <style name="radioButtonStyle">
+        <item name="android:fontFamily">@font/fonts</item>
+        <item name="android:fontStyle">normal</item>
+        <item name="android:textColor">@color/colorMainText</item>
+        <item name="android:textSize">5pt</item>
+        <item name="android:buttonTint">@color/colorSecondary</item>
     </style>
 
 </resources>
