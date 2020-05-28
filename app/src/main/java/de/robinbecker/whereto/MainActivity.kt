@@ -9,6 +9,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.fragment.app.FragmentTransaction
 import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener{
@@ -16,6 +17,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     lateinit var toolbar: Toolbar
     lateinit var drawerLayout: DrawerLayout
     lateinit var navView: NavigationView
+    lateinit var reservationsList: ReservationsListFragment
+    lateinit var startFragment : StartFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,7 +36,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
         navView.setNavigationItemSelectedListener(this)
-
+        
     }
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
@@ -47,7 +50,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 Toast.makeText(this, "Chat clicked", Toast.LENGTH_SHORT).show()
             }
             R.id.nav_reservations -> {
-                Toast.makeText(this, "Reservations clicked", Toast.LENGTH_SHORT).show()
+              // reservationsList = ReservationsListFragment()
+                setContentView(R.layout.activity_view_reservations_list)
+                /*supportFragmentManager
+                    .beginTransaction()
+                    .replace(R.id.start_page, reservationsList)
+                    .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                    .commit()*/
             }
             R.id.nav_rating -> {
                 Toast.makeText(this, "Rating clicked", Toast.LENGTH_SHORT).show()
