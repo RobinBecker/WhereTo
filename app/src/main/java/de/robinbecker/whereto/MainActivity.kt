@@ -39,13 +39,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val filter: TextView = findViewById(R.id.filter)
         filter.setOnClickListener {
             supportFragmentManager.beginTransaction()
-                .replace(R.id.start, Filter()).commit()
+                .replace(R.id.start, Filter()).addToBackStack("back").commit()
         }
 
         val random: Button = findViewById(R.id.random)
         random.setOnClickListener {
             supportFragmentManager.beginTransaction()
-                .replace(R.id.start, RestaurantDetail()).commit()
+                .replace(R.id.start, RestaurantDetail()).addToBackStack("back").commit()
         }
     }
 
