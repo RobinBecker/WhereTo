@@ -158,12 +158,11 @@
         app:layout_constraintStart_toStartOf="@+id/dropdown_art"
         app:layout_constraintTop_toBottomOf="@+id/dropdown_art">
 
-        <RadioButton
+        <CheckBox
             android:id="@+id/radio_italienisch"
             style="@style/radioButtonStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:checked="true"
             android:text="@string/italienisch" />
     </RadioGroup>
 
@@ -176,7 +175,7 @@
         app:layout_constraintStart_toStartOf="@+id/dropdown_art"
         app:layout_constraintTop_toBottomOf="@+id/dropdown_art">
 
-        <RadioButton
+        <CheckBox
             android:id="@+id/radio_spanisch"
             style="@style/radioButtonStyle"
             android:layout_width="match_parent"
@@ -193,7 +192,7 @@
         app:layout_constraintStart_toStartOf="@+id/dropdown_art"
         app:layout_constraintTop_toBottomOf="@+id/dropdown_art">
 
-        <RadioButton
+        <CheckBox
             android:id="@+id/radio_mexikanisch"
             style="@style/radioButtonStyle"
             android:layout_width="match_parent"
@@ -209,7 +208,7 @@
         app:layout_constraintStart_toEndOf="@+id/radioGroup2"
         app:layout_constraintTop_toTopOf="@+id/radioGroup2">
 
-        <RadioButton
+        <CheckBox
             android:id="@+id/radio_asiatisch"
             style="@style/radioButtonStyle"
             android:layout_width="117dp"
@@ -226,7 +225,7 @@
         app:layout_constraintStart_toEndOf="@+id/radioGroup2"
         app:layout_constraintTop_toTopOf="@+id/radioGroup2">
 
-        <RadioButton
+        <CheckBox
             android:id="@+id/radio_deutsch"
             style="@style/radioButtonStyle"
             android:layout_width="match_parent"
@@ -243,7 +242,7 @@
         app:layout_constraintStart_toEndOf="@+id/radioGroup2"
         app:layout_constraintTop_toTopOf="@+id/radioGroup2">
 
-    <RadioButton
+    <CheckBox
             android:id="@+id/radio_türkisch"
             style="@style/radioButtonStyle"
             android:layout_width="match_parent"
