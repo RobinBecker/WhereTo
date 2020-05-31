@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/colorBackground">
+    android:background="@color/colorBackground"
+    android:id="@+id/detail">
 
     <Button
         android:id="@+id/reserve_restaurant"
@@ -30,17 +31,6 @@
         android:elevation="8dp"
         android:gravity="center_vertical|center_horizontal"
         android:text="@string/freunde_einladen"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageButton
-        android:id="@+id/back_button"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="624dp"
-        android:background="@drawable/back_button"
-        android:contentDescription="@string/back_arrow"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

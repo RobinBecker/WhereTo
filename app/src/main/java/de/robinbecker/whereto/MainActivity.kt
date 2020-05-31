@@ -1,17 +1,19 @@
 package de.robinbecker.whereto
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
 
-class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener{
+
+class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     lateinit var toolbar: Toolbar
     lateinit var drawerLayout: DrawerLayout
@@ -34,7 +36,19 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         toggle.syncState()
         navView.setNavigationItemSelectedListener(this)
 
+        val filter: TextView = findViewById(R.id.filter)
+        filter.setOnClickListener {
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.start, Filter()).addToBackStack("back").commit()
+        }
+
+        val random: Button = findViewById(R.id.random)
+        random.setOnClickListener {
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.start, RestaurantDetail()).addToBackStack("back").commit()
+        }
     }
+
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.nav_search -> {
