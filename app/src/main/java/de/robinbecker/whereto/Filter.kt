@@ -20,7 +20,7 @@ open class Filter : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(de.robinbecker.whereto.R.layout.activity_filter, container, false)
+        return inflater.inflate(R.layout.activity_filter, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
