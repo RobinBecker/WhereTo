@@ -40,13 +40,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val filter: TextView = findViewById(R.id.filter)
         filter.setOnClickListener {
             supportFragmentManager.beginTransaction()
-                .replace(R.id.start, Filter()).addToBackStack("back").commit()
+                .add(R.id.drawer_layout, Filter()).addToBackStack("back").commit()
         }
 
         val random: Button = findViewById(R.id.random)
         random.setOnClickListener {
             supportFragmentManager.beginTransaction()
-                .replace(R.id.start, RestaurantDetail()).addToBackStack("back").commit()
+                .replace(R.id.drawer_layout, RestaurantDetail()).addToBackStack("back").commit()
         }
 
     }
@@ -54,7 +54,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.nav_search -> {
-                Toast.makeText(this, "Search clicked", Toast.LENGTH_SHORT).show()
+                val filter: TextView = findViewById(R.id.filter)
+                filter.setOnClickListener {
+                    supportFragmentManager.beginTransaction()
+                        .add(R.id.drawer_layout, Filter()).addToBackStack("back").commit()
+                }
+                
             }
             R.id.nav_settings -> {
                 Toast.makeText(this, "Settings clicked", Toast.LENGTH_SHORT).show()

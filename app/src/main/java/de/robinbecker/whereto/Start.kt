@@ -8,10 +8,10 @@ import android.view.View
 import android.view.ViewGroup
 
 
-class StartFragment : Fragment() {
+class Start : Fragment() {
 
     companion object {
-        fun newInstance() = StartFragment()
+        fun newInstance() = Start()
     }
 
     private lateinit var viewModel: StartViewModel

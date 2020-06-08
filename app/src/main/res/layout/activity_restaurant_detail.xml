@@ -6,6 +6,8 @@
     android:background="@color/colorBackground"
     android:id="@+id/detail">
 
+    <include layout="@layout/toolbar"/>
+
     <Button
         android:id="@+id/reserve_restaurant"
         style="@style/buttonEnabled"
