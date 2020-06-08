@@ -277,6 +277,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
+        android:id="@+id/take_filter"
         style="@style/buttonEnabled"
         android:layout_width="182dp"
         android:layout_height="45dp"
