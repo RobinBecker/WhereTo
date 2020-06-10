@@ -59,7 +59,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     supportFragmentManager.beginTransaction()
                         .add(R.id.drawer_layout, Filter()).addToBackStack("back").commit()
                 }
-                
+
             }
             R.id.nav_settings -> {
                 Toast.makeText(this, "Settings clicked", Toast.LENGTH_SHORT).show()
