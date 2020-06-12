@@ -10,15 +10,6 @@
 
     <include layout="@layout/toolbar"/>
 
-    <com.google.android.material.navigation.NavigationView
-        android:id="@+id/nav_view"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        android:fitsSystemWindows="true"
-        app:headerLayout="@layout/nav_header"
-        app:menu="@menu/drawer_menu"/>
-
     <LinearLayout
         android:id="@+id/layout_seekbar_interval_holder"
         android:layout_width="match_parent"

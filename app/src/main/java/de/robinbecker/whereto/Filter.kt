@@ -1,11 +1,12 @@
 package de.robinbecker.whereto
 
+import android.app.Activity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import androidx.appcompat.app.ActionBarDrawerToggle
+import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
@@ -26,14 +27,11 @@ open class Filter : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         setMenuVisibility(true)
-
-        var fragmentManager =  parentFragmentManager
-        var fragmentTransaction = fragmentManager.beginTransaction()
-
-        val view: View = inflater.inflate(de.robinbecker.whereto.R.layout.activity_filter, container, false)
+        val mActivity: Activity? = this.activity
+        val view: View = inflater.inflate(R.layout.activity_filter, container, false)
         val filter: Button = view.findViewById<View>(de.robinbecker.whereto.R.id.take_filter) as Button
         filter.setOnClickListener {
-            fragmentTransaction.replace(de.robinbecker.whereto.R.id.set_filter, Start()).commit()
+            Toast.makeText(mActivity, "Filter were set", Toast.LENGTH_SHORT).show()
         }
         return view
     }
