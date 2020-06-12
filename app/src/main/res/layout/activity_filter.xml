@@ -8,6 +8,8 @@
     tools:context=".Filter"
     android:id="@+id/set_filter">
 
+    <include layout="@layout/toolbar"/>
+
     <LinearLayout
         android:id="@+id/layout_seekbar_interval_holder"
         android:layout_width="match_parent"
@@ -277,6 +279,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
+        android:id="@+id/take_filter"
         style="@style/buttonEnabled"
         android:layout_width="182dp"
         android:layout_height="45dp"
