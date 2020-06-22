@@ -1,5 +1,6 @@
 package de.robinbecker.whereto
 
+import android.os.AsyncTask
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Button
@@ -15,7 +16,6 @@ import com.google.android.material.navigation.NavigationView
 
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
-
     lateinit var toolbar: Toolbar
     lateinit var drawerLayout: DrawerLayout
     lateinit var navView: NavigationView
@@ -23,6 +23,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val db = AccountRoomDatabase.getDatabase(this)!!
+        val initData = InitData()
 
         toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
@@ -47,6 +50,21 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         random.setOnClickListener {
             supportFragmentManager.beginTransaction()
                 .replace(R.id.drawer_layout, RestaurantDetail()).addToBackStack("back").commit()
+        }
+
+        AsyncTask.execute {
+            run {
+
+                // ---Benutze das unten beim ersten Mal Starten mit den neuen DB-Inhalten---
+                //db.clearAllTables()
+
+                // Datenbank mit Test Daten füllen
+                initData.loadDatabase(db)
+
+                // Werk auf main (nur fuer Entwicklung)
+                val restaurant = db.whereToDAO().getAllRestaurants()
+                println("hjsdfkjsdhdfkjsddfhf" + restaurant[2].name)
+            }
         }
     }
 
