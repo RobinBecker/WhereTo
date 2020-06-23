@@ -11,8 +11,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
-import androidx.fragment.app.Fragment
 import com.google.android.material.navigation.NavigationView
+import de.robinbecker.whereto.entities.Restaurant
 
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -26,6 +26,19 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         val db = AccountRoomDatabase.getDatabase(this)!!
         val initData = InitData()
+
+        AsyncTask.execute {
+            run {
+
+                // ---Benutze das unten beim ersten Mal Starten mit den neuen DB-Inhalten---
+                //db.clearAllTables()
+
+                // Datenbank mit Test Daten füllen
+                initData.loadDatabase(db)
+            }
+
+        }
+
 
         toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
@@ -50,21 +63,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         random.setOnClickListener {
             supportFragmentManager.beginTransaction()
                 .replace(R.id.drawer_layout, RestaurantDetail()).addToBackStack("back").commit()
-        }
-
-        AsyncTask.execute {
-            run {
-
-                // ---Benutze das unten beim ersten Mal Starten mit den neuen DB-Inhalten---
-                //db.clearAllTables()
-
-                // Datenbank mit Test Daten füllen
-                initData.loadDatabase(db)
-
-                // Werk auf main (nur fuer Entwicklung)
-                val restaurant = db.whereToDAO().getAllRestaurants()
-                println("hjsdfkjsdhdfkjsddfhf" + restaurant[2].name)
-            }
         }
     }
 
