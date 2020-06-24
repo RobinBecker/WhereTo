@@ -8,6 +8,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
+import com.google.android.gms.maps.CameraUpdateFactory
+import com.google.android.gms.maps.GoogleMapOptions
+import com.google.android.gms.maps.MapView
+import com.google.android.gms.maps.model.CameraPosition
+import com.google.android.gms.maps.model.LatLng
 import de.robinbecker.whereto.entities.Restaurant
 
 
@@ -37,6 +42,20 @@ class RestaurantDetail : Fragment() {
                 ort.append(random.plz + " " + random.location)
             }
         }
+        var mapView: MapView = view.findViewById(R.id.mapView)
+        mapView.onCreate(savedInstanceState)
+
+        mapView.getMapAsync { map ->
+            map.animateCamera(
+                CameraUpdateFactory.newLatLng(
+                    LatLng(
+                        52.520008, 13.404954
+                    )
+                )
+            )
+        }
+
+
         return view
     }
 
