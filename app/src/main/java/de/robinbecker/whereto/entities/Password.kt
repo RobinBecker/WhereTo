@@ -5,7 +5,7 @@ import androidx.room.ForeignKey
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "password")
-open class Password(
+data class Password(
     var password: String,
-    var userId: String
+    @PrimaryKey var userId: String
 )

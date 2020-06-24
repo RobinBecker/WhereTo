@@ -5,7 +5,7 @@ import androidx.room.PrimaryKey
 
 
     @Entity(tableName = "restaurant")
-    open class Restaurant(
+    data class Restaurant(
         @PrimaryKey val id: Int,
         var name: String,
         var phone: String,

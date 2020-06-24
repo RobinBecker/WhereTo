@@ -4,7 +4,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "plz")
-open class PLZ(
+data class PLZ(
 @PrimaryKey val plz: Int,
 var ort: String
 )

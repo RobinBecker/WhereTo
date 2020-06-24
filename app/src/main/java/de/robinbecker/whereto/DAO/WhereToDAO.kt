@@ -3,8 +3,10 @@ package de.robinbecker.whereto.DAO
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
-import de.robinbecker.whereto.db.Reservierung
-import de.robinbecker.whereto.db.Password
+import de.robinbecker.whereto.entities.KuechenArt
+import de.robinbecker.whereto.entities.Reservierung
+import de.robinbecker.whereto.entities.Password
+import de.robinbecker.whereto.entities.RestaurantArt
 import de.robinbecker.whereto.entities.Restaurant
 import de.robinbecker.whereto.entities.User
 
@@ -31,7 +33,7 @@ interface WhereToDAO {
 
     //USER Login
     @Query("SELECT * FROM user WHERE email LIKE :mail")
-    fun getUserForEmail(mail: String)
+    fun getUserForEmail(mail: String) : User
 
 
     //Reservierung
@@ -39,27 +41,27 @@ interface WhereToDAO {
     fun insertReservierung(reservierung: Reservierung)
 
     @Query("SELECT * FROM reservierung")
-    fun getAllReservierungen()
+    fun getAllReservierungen(): List<Reservierung>
 
     //Passwort
     @Insert
-    fun insertPasswortForUser()
+    fun insertPasswortForUser(password: Password)
 
     @Query("SELECT * FROM password WHERE userId LIKE :pass")
-    fun getPasswordForUser(pass: String)
+    fun getPasswordForUser(pass: String): Password
 
     //KuechenArt
     @Insert
-    fun insertKuechenArt()
+    fun insertKuechenArt(kuechenArt: KuechenArt)
 
     @Query("SELECT * FROM kuechenart")
-    fun getAllKuechenArt()
+    fun getAllKuechenArt(): List<KuechenArt>
 
     //RestaurantArt
     @Insert
-    fun insertRestaurantArt()
+    fun insertRestaurantArt(restaurantArt: RestaurantArt)
 
     @Query("SELECT * FROM RestaurantArt")
-    fun getAllRestaurantArts()
+    fun getAllRestaurantArts(): List<RestaurantArt>
 }
 

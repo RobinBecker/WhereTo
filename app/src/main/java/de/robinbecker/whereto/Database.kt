@@ -5,12 +5,23 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import de.robinbecker.whereto.DAO.WhereToDAO
-import de.robinbecker.whereto.entities.Restaurant
+import de.robinbecker.whereto.entities.*
+
 
 @Database(
-    entities = arrayOf(
-        Restaurant::class
-    ),
+    entities = [
+        Restaurant::class,
+        Bewertung::class,
+        Freunde::class,
+        KuechenArt::class,
+        Password::class,
+        PLZ::class,
+        Reservierung::class,
+        RestaurantArt::class,
+        User::class
+
+
+    ],
     version = 29,
     exportSchema = false
 )
