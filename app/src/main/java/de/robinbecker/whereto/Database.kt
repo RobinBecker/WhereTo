@@ -22,7 +22,7 @@ import de.robinbecker.whereto.entities.*
 
 
     ],
-    version = 29,
+    version = 30,
     exportSchema = false
 )
 abstract class AccountRoomDatabase : RoomDatabase() {
