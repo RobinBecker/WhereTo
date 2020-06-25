@@ -42,19 +42,8 @@ class RestaurantDetail : Fragment() {
                 ort.append(random.plz + " " + random.location)
             }
         }
-        var mapView: MapView = view.findViewById(R.id.mapView)
+        val mapView: MapView = view.findViewById(R.id.mapView)
         mapView.onCreate(savedInstanceState)
-
-        mapView.getMapAsync { map ->
-            map.animateCamera(
-                CameraUpdateFactory.newLatLng(
-                    LatLng(
-                        52.520008, 13.404954
-                    )
-                )
-            )
-        }
-
 
         return view
     }
