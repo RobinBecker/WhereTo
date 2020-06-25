@@ -40,6 +40,7 @@
     <string name="restaurant_name">Restaurant Name</string>
     <string name="strasse">Straße</string>
     <string name="plz_und_stadt">PLZ und Stadt</string>
+    <string name="beliebig">beliebig</string>
     <string name="open" />
     <string-array name="art_array">
         <item>beliebig</item>

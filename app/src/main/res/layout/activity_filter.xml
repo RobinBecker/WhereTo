@@ -126,7 +126,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
-        android:id="@+id/dropdown_art"
+        android:id="@+id/kind"
         android:layout_width="222dp"
         android:layout_height="29dp"
         android:layout_marginStart="144dp"
@@ -157,8 +157,8 @@
         android:layout_height="31dp"
         android:layout_marginTop="28dp"
         android:orientation="vertical"
-        app:layout_constraintStart_toStartOf="@+id/dropdown_art"
-        app:layout_constraintTop_toBottomOf="@+id/dropdown_art">
+        app:layout_constraintStart_toStartOf="@+id/kind"
+        app:layout_constraintTop_toBottomOf="@+id/kind">
 
         <CheckBox
             android:id="@+id/radio_italienisch"
@@ -174,8 +174,8 @@
         android:layout_height="31dp"
         android:layout_marginTop="59dp"
         android:orientation="vertical"
-        app:layout_constraintStart_toStartOf="@+id/dropdown_art"
-        app:layout_constraintTop_toBottomOf="@+id/dropdown_art">
+        app:layout_constraintStart_toStartOf="@+id/kind"
+        app:layout_constraintTop_toBottomOf="@+id/kind">
 
         <CheckBox
             android:id="@+id/radio_spanisch"
@@ -191,8 +191,8 @@
         android:layout_height="31dp"
         android:layout_marginTop="90dp"
         android:orientation="vertical"
-        app:layout_constraintStart_toStartOf="@+id/dropdown_art"
-        app:layout_constraintTop_toBottomOf="@+id/dropdown_art">
+        app:layout_constraintStart_toStartOf="@+id/kind"
+        app:layout_constraintTop_toBottomOf="@+id/kind">
 
         <CheckBox
             android:id="@+id/radio_mexikanisch"
