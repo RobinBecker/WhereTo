@@ -64,4 +64,18 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+    <string name="email">email</string>
+    <string name="profil_anlegen">Profil anlegen</string>
+    <string name="passwort">Passwort *</string>
+    <string name="username">Username *</string>
+    <string name="registrierung">Registrierung</string>
+    <string name="registrieren">Registrieren</string>
+    <string name="login">Login</string>
+    <string name="passwort_vergessen">Passwort vergessen</string>
+    <string name="where_to">Where to ...?</string>
+    <string name="passwort2">Passwort</string>
+    <string name="email2">Email</string>
+    <string name="neues_passwort">Neues Passwort</string>
+    <string name="or">OR</string>
+    <string name="back">back</string>
 </resources>
