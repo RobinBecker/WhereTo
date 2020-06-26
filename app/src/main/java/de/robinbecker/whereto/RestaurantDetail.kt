@@ -21,6 +21,8 @@ class RestaurantDetail : Fragment() {
 
     private lateinit var viewModel: RestaurantDetailViewModel
     lateinit var restaurants: List<Restaurant>
+    private lateinit var kind: String
+    private lateinit var price: String
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -29,25 +31,21 @@ class RestaurantDetail : Fragment() {
         val view: View = inflater.inflate(R.layout.activity_restaurant_detail, container, false)
         val db = activity?.let { AccountRoomDatabase.getDatabase(it) }!!
 
-        val filterParameter: List<String> = getParameterToFilterRestaurants(view)
-        val kitchenParameter: List<Boolean> = getKitchenOfRestaurantsForFilter(view)
+        val parameter: List<String> = checkFilterValue()
 
         AsyncTask.execute {
             run {
-                restaurants = if(filterParameter[0] == "beliebig" && filterParameter[1] == "beliebig" && !kitchenParameter.contains(true)){
-                    db.whereToDAO().getAllRestaurants()
-                } else {
-                    db.whereToDAO().getFilteredRestaurants(filterParameter[0], filterParameter[1], "türkisch")
-                }
-                val random = restaurants.random()
-                val name: TextView = view.findViewById(R.id.restaurant_name)
-                val strasse: TextView = view.findViewById(R.id.restaurant_strasse)
-                val ort: TextView = view.findViewById(R.id.restaurant_plz)
-                name.append(random.name)
-                strasse.append(random.street)
-                ort.append(random.plz + " " + random.location)
+                restaurants = db.whereToDAO().getFilteredRestaurants(parameter[0], parameter[1])
             }
+            val random = restaurants.random()
+            val name: TextView = view.findViewById(R.id.restaurant_name)
+            val strasse: TextView = view.findViewById(R.id.restaurant_strasse)
+            val ort: TextView = view.findViewById(R.id.restaurant_plz)
+            name.append(random.name)
+            strasse.append(random.street)
+            ort.append(random.plz + " " + random.location)
         }
+
         val mapView: MapView = view.findViewById(R.id.mapView)
         mapView.onCreate(savedInstanceState)
 
@@ -60,40 +58,25 @@ class RestaurantDetail : Fragment() {
         // TODO: Use the ViewModel
     }
 
-    private fun getParameterToFilterRestaurants(view: View) : List<String> {
-        val filterParameter: List<String> = emptyList()
+    private fun checkFilterValue(): List<String>{
+        val parameter: List<String> = emptyList()
 
-        val kindSpinner: Spinner = view.findViewById(R.id.kind)
-        val kind: String = kindSpinner.selectedItem.toString()
+        kind = if (MainActivity.kind != "beliebig"){
+            MainActivity.kind
+        } else {
+            "%"
+        }
 
-        val priceSpinner:Spinner = view.findViewById(R.id.dropdown_preis)
-        val price: String = priceSpinner.selectedItem.toString()
+        price = if (MainActivity.price != "beliebig"){
+            MainActivity.price
+        } else {
+            "%"
+        }
 
-        filterParameter.toMutableList().add(price)
-        filterParameter.toMutableList().add(kind)
+        parameter.toMutableList().add(kind)
+        parameter.toMutableList().add(price)
 
-        return filterParameter
-    }
-
-    private fun getKitchenOfRestaurantsForFilter(view: View) : List<Boolean> {
-
-        val kitchenForFilter: List<Boolean> = emptyList()
-
-        val isItalian: Boolean = view.findViewById<CheckBox>(R.id.radio_italienisch).isChecked
-        val isSpain: Boolean = view.findViewById<CheckBox>(R.id.radio_spanisch).isChecked
-        val isMexican: Boolean = view.findViewById<CheckBox>(R.id.radio_mexikanisch).isChecked
-        val isGerman: Boolean = view.findViewById<CheckBox>(R.id.radio_deutsch).isChecked
-        val isTurkish: Boolean = view.findViewById<CheckBox>(R.id.radio_türkisch).isChecked
-        val isAsian: Boolean = view.findViewById<CheckBox>(R.id.radio_asiatisch).isChecked
-
-        kitchenForFilter.toMutableList().add(isItalian)
-        kitchenForFilter.toMutableList().add(isSpain)
-        kitchenForFilter.toMutableList().add(isMexican)
-        kitchenForFilter.toMutableList().add(isGerman)
-        kitchenForFilter.toMutableList().add(isTurkish)
-        kitchenForFilter.toMutableList().add(isAsian)
-
-        return kitchenForFilter
+        return parameter
     }
 
 }

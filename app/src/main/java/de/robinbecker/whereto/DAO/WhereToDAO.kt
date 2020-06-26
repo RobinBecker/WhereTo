@@ -21,8 +21,8 @@ interface WhereToDAO {
     @Query("SELECT * FROM restaurant")
     fun getAllRestaurants(): List<Restaurant>
 
-    @Query("SELECT * from restaurant WHERE restaurant.price_range=:priceRange and restaurant.kitchen=:kitchen and restaurant.kind=:kind")
-    fun getFilteredRestaurants(priceRange: String, kitchen: String, kind: String): List<Restaurant>
+    @Query("SELECT * from restaurant WHERE restaurant.kind like :kind and restaurant.price_range like :price")
+    fun getFilteredRestaurants(kind: String, price: String): List<Restaurant>
 
     // USER
     @Insert
