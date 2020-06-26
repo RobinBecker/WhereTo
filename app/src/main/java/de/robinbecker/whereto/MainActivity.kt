@@ -69,6 +69,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             supportFragmentManager.beginTransaction()
                 .replace(R.id.drawer_layout, RestaurantDetail()).addToBackStack("back").commit()
         }
+
+        val list: TextView = findViewById(R.id.show_restaurant)
+        filter.setOnClickListener {
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.drawer_layout, List()).addToBackStack("back").commit()
+        }
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
