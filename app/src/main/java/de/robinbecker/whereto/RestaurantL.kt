@@ -8,13 +8,13 @@ import android.view.View
 import android.view.ViewGroup
 
 
-class List : Fragment() {
+class RestaurantL : Fragment() {
 
     companion object {
-        fun newInstance() = List()
+        fun newInstance() = RestaurantL()
     }
 
-    private lateinit var viewModel: ListViewModel
+    private lateinit var viewModel: RestaurantLViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,7 +25,7 @@ class List : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(ListViewModel::class.java)
+        viewModel = ViewModelProviders.of(this).get(RestaurantLViewModel::class.java)
         // TODO: Use the ViewModel
     }
 

@@ -12,7 +12,6 @@ import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
-import de.robinbecker.whereto.entities.Restaurant
 
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -71,9 +70,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
 
         val list: TextView = findViewById(R.id.show_restaurant)
-        filter.setOnClickListener {
+        list.setOnClickListener {
             supportFragmentManager.beginTransaction()
-                .replace(R.id.drawer_layout, List()).addToBackStack("back").commit()
+                .replace(R.id.drawer_layout, RestaurantL()).addToBackStack("back").commit()
         }
     }
 

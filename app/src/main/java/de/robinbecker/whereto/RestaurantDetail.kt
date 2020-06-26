@@ -29,11 +29,21 @@ class RestaurantDetail : Fragment() {
         val view: View = inflater.inflate(R.layout.activity_restaurant_detail, container, false)
         val db = activity?.let { AccountRoomDatabase.getDatabase(it) }!!
 
-        val parameter: List<String> = checkFilterValue()
+        kind = if (MainActivity.kind != "beliebig"){
+            MainActivity.kind
+        } else {
+            "%"
+        }
+
+        price = if (MainActivity.price != "beliebig"){
+            MainActivity.price
+        } else {
+            "%"
+        }
 
         AsyncTask.execute {
             run {
-                restaurants = db.whereToDAO().getFilteredRestaurants(parameter[0], parameter[1])
+                restaurants = db.whereToDAO().getFilteredRestaurants(kind, price)
             }
             val random = restaurants.random()
             val name: TextView = view.findViewById(R.id.restaurant_name)
@@ -55,26 +65,4 @@ class RestaurantDetail : Fragment() {
         viewModel = ViewModelProviders.of(this).get(RestaurantDetailViewModel::class.java)
         // TODO: Use the ViewModel
     }
-
-    private fun checkFilterValue(): List<String>{
-        val parameter: List<String> = emptyList()
-
-        kind = if (MainActivity.kind != "beliebig"){
-            MainActivity.kind
-        } else {
-            "%"
-        }
-
-        price = if (MainActivity.price != "beliebig"){
-            MainActivity.price
-        } else {
-            "%"
-        }
-
-        parameter.toMutableList().add(kind)
-        parameter.toMutableList().add(price)
-
-        return parameter
-    }
-
 }
