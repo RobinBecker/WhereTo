@@ -12,13 +12,17 @@ import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
-import de.robinbecker.whereto.entities.Restaurant
 
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
     lateinit var toolbar: Toolbar
     lateinit var drawerLayout: DrawerLayout
     lateinit var navView: NavigationView
+
+    companion object {
+        var kind = "beliebig"
+        var price = "beliebig"
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -63,6 +67,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         random.setOnClickListener {
             supportFragmentManager.beginTransaction()
                 .replace(R.id.drawer_layout, RestaurantDetail()).addToBackStack("back").commit()
+        }
+
+        val list: TextView = findViewById(R.id.show_restaurant)
+        list.setOnClickListener {
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.drawer_layout, RestaurantL()).addToBackStack("back").commit()
         }
     }
 

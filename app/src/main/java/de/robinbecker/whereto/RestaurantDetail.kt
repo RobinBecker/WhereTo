@@ -8,11 +8,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
-import com.google.android.gms.maps.CameraUpdateFactory
-import com.google.android.gms.maps.GoogleMapOptions
 import com.google.android.gms.maps.MapView
-import com.google.android.gms.maps.model.CameraPosition
-import com.google.android.gms.maps.model.LatLng
 import de.robinbecker.whereto.entities.Restaurant
 
 
@@ -23,6 +19,8 @@ class RestaurantDetail : Fragment() {
 
     private lateinit var viewModel: RestaurantDetailViewModel
     lateinit var restaurants: List<Restaurant>
+    private lateinit var kind: String
+    private lateinit var price: String
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -30,18 +28,32 @@ class RestaurantDetail : Fragment() {
     ): View? {
         val view: View = inflater.inflate(R.layout.activity_restaurant_detail, container, false)
         val db = activity?.let { AccountRoomDatabase.getDatabase(it) }!!
+
+        kind = if (MainActivity.kind != "beliebig"){
+            MainActivity.kind
+        } else {
+            "%"
+        }
+
+        price = if (MainActivity.price != "beliebig"){
+            MainActivity.price
+        } else {
+            "%"
+        }
+
         AsyncTask.execute {
             run {
-                restaurants = db.whereToDAO().getAllRestaurants()
-                val random = restaurants.random()
-                val name: TextView = view.findViewById(R.id.restaurant_name)
-                val strasse: TextView = view.findViewById(R.id.restaurant_strasse)
-                val ort: TextView = view.findViewById(R.id.restaurant_plz)
-                name.append(random.name)
-                strasse.append(random.street)
-                ort.append(random.plz + " " + random.location)
+                restaurants = db.whereToDAO().getFilteredRestaurants(kind, price)
             }
+            val random = restaurants.random()
+            val name: TextView = view.findViewById(R.id.restaurant_name)
+            val strasse: TextView = view.findViewById(R.id.restaurant_strasse)
+            val ort: TextView = view.findViewById(R.id.restaurant_plz)
+            name.append(random.name)
+            strasse.append(random.street)
+            ort.append(random.plz + " " + random.location)
         }
+
         val mapView: MapView = view.findViewById(R.id.mapView)
         mapView.onCreate(savedInstanceState)
 
@@ -53,5 +65,4 @@ class RestaurantDetail : Fragment() {
         viewModel = ViewModelProviders.of(this).get(RestaurantDetailViewModel::class.java)
         // TODO: Use the ViewModel
     }
-
 }
