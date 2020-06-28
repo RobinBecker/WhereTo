@@ -1,0 +1,128 @@
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context=".SignupActivity"
+    >
+    <LinearLayout
+        android:id="@+id/ll_main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:padding="25dp"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="40dp"
+            android:src="@drawable/logo"
+            android:contentDescription="@string/logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textColor="@color/colorMainText"
+            android:fontFamily="@font/raleway"
+            android:padding="5dp"
+            android:text="@string/where_to"/>
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/colorMainText"
+            android:fontFamily="@font/raleway"
+            android:layout_gravity="start"
+            android:text="@string/email"
+            android:layout_marginStart="58dp"
+            />
+
+        <EditText
+            android:id="@+id/input_email"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/login_edit_background"
+            android:drawableStart="@drawable/ic_person_add_black_24dp"
+            android:drawableTint="@color/colorPrimary"
+            android:drawablePadding="10dp"
+            android:padding="10dp"
+            android:layout_marginBottom="10dp"
+            android:autofillHints="  "
+            android:inputType="text"
+            android:hint="@string/email"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/colorMainText"
+            android:fontFamily="@font/raleway"
+            android:layout_gravity="start"
+            android:layout_marginStart="58dp"
+            android:text="@string/passwort"
+            android:gravity="center_horizontal"/>
+
+        <EditText
+            android:id="@+id/input_passwort"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:background="@drawable/login_edit_background"
+            android:padding="10dp"
+            android:drawablePadding="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:drawableStart="@drawable/ic_lock_black_24dp"
+            android:inputType="text"
+            android:hint="@string/passwort2"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "@string/passwort_vergessen"
+            android:textColor="@color/colorPrimaryVariant"
+            android:padding="10dp"
+            android:textSize="10sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"
+            tools:ignore="SmallSp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="35dp"
+                style="@style/buttonEnabled"
+                android:background="@drawable/shape_button"
+                android:text="@string/login"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_registrieren"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                style="@style/buttonEnabled"
+                android:background="@drawable/shape_button"
+                android:text="@string/registrieren"
+                android:textAllCaps="false"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

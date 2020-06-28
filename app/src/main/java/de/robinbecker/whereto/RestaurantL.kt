@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
-import com.google.common.reflect.Reflection.getPackageName
 import de.robinbecker.whereto.entities.Restaurant
 
 
@@ -31,14 +30,14 @@ class RestaurantL : Fragment() {
         val view: View = inflater.inflate(R.layout.activity_restaurant_list, container, false)
         val db = activity?.let { AccountRoomDatabase.getDatabase(it) }!!
 
-        kind = if (MainActivity.kind != "beliebig"){
-            MainActivity.kind
+        kind = if (HomeActivity.kind != "beliebig"){
+            HomeActivity.kind
         } else {
             "%"
         }
 
-        price = if (MainActivity.price != "beliebig"){
-            MainActivity.price
+        price = if (HomeActivity.price != "beliebig"){
+            HomeActivity.price
         } else {
             "%"
         }
