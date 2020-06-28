@@ -40,7 +40,7 @@ open class Filter : Fragment() {
                 id: Long
             ) {
                 val kind = parent.getItemAtPosition(position)
-                MainActivity.kind = kind.toString()
+                HomeActivity.kind = kind.toString()
             }}
 
         val priceSpinner: Spinner = view.findViewById(R.id.dropdown_preis)
@@ -56,7 +56,7 @@ open class Filter : Fragment() {
                 id: Long
             ) {
                 val price = parent.getItemAtPosition(position)
-                MainActivity.price = price.toString()
+                HomeActivity.price = price.toString()
             }}
 
         filter.setOnClickListener {

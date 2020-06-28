@@ -2,6 +2,7 @@ package de.robinbecker.whereto
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.os.AsyncTask
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.*
@@ -16,14 +17,28 @@ import com.google.firebase.auth.FirebaseAuth
 
 @SuppressLint("Registered")
 class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
-
     lateinit var toolbar: Toolbar
     lateinit var drawerLayout: DrawerLayout
     lateinit var navView: NavigationView
 
+    companion object {
+        var kind = "beliebig"
+        var price = "beliebig"
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val db = AccountRoomDatabase.getDatabase(this)!!
+        val initData = InitData()
+
+        AsyncTask.execute {
+            run {
+                initData.loadDatabase(db)
+            }
+
+        }
 
         toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
@@ -41,15 +56,20 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val filter: TextView = findViewById(R.id.filter)
         filter.setOnClickListener {
             supportFragmentManager.beginTransaction()
-                .replace(R.id.start, Filter()).addToBackStack("back").commit()
+                .replace(R.id.drawer_layout, Filter()).addToBackStack("back").commit()
         }
 
         val random: Button = findViewById(R.id.random)
         random.setOnClickListener {
             supportFragmentManager.beginTransaction()
-                .replace(R.id.start, RestaurantDetail()).addToBackStack("back").commit()
+                .replace(R.id.drawer_layout, RestaurantDetail()).addToBackStack("back").commit()
         }
 
+        val list: TextView = findViewById(R.id.show_restaurant)
+        list.setOnClickListener {
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.drawer_layout, RestaurantL()).addToBackStack("back").commit()
+        }
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {

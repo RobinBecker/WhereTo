@@ -29,14 +29,14 @@ class RestaurantDetail : Fragment() {
         val view: View = inflater.inflate(R.layout.activity_restaurant_detail, container, false)
         val db = activity?.let { AccountRoomDatabase.getDatabase(it) }!!
 
-        kind = if (MainActivity.kind != "beliebig"){
-            MainActivity.kind
+        kind = if (HomeActivity.kind != "beliebig"){
+            HomeActivity.kind
         } else {
             "%"
         }
 
-        price = if (MainActivity.price != "beliebig"){
-            MainActivity.price
+        price = if (HomeActivity.price != "beliebig"){
+            HomeActivity.price
         } else {
             "%"
         }
