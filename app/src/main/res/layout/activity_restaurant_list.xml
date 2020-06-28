@@ -13,148 +13,199 @@
         layout="@layout/toolbar" />
 
     <TextView
-        style="@style/description"
         android:id="@+id/textView7"
+        style="@style/title2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="144dp"
+        android:layout_marginStart="132dp"
         android:text="@string/restaurant_liste"
         app:layout_constraintBottom_toBottomOf="@+id/include"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/include"
-        app:layout_constraintVertical_bias="0.107" />
-
-    <TextView
-        style="@style/boldString"
-        android:id="@+id/rs_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.128"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.186" />
+        app:layout_constraintVertical_bias="0.098" />
 
     <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@+id/rs_1"
-        app:layout_constraintTop_toBottomOf="@+id/rs_1"
-        android:layout_width="300dp">
-
-        <TextView
-            style="@style/description"
-            android:id="@+id/kind_1"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="165dp" />
-
-        <TextView
-            style="@style/description"
-            android:id="@+id/kitchen_1"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            tools:layout_editor_absoluteX="318dp"
-            tools:layout_editor_absoluteY="160dp" />
-
-        <TextView
-            style="@style/description"
-            android:id="@+id/price_1"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            tools:layout_editor_absoluteX="122dp"
-            tools:layout_editor_absoluteY="165dp" />
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/rs_2"
-        style="@style/boldString"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.128"
+        android:id="@+id/restautant1"
+        android:layout_width="330dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="140dp"
+        android:background="@drawable/borders"
+        android:orientation="vertical"
+        android:padding="10dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.256" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/rs_1"
+            style="@style/boldString"
+            android:layout_width="315dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.128"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.186" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="315dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/rs_1"
+            app:layout_constraintTop_toBottomOf="@+id/rs_1">
+
+            <TextView
+                android:id="@+id/kind_1"
+                style="@style/description"
+                android:layout_width="105dp"
+                android:layout_height="wrap_content"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="165dp" />
+
+            <TextView
+                android:id="@+id/kitchen_1"
+                style="@style/description"
+                android:layout_width="105dp"
+                android:layout_height="wrap_content"
+                tools:layout_editor_absoluteX="318dp"
+                tools:layout_editor_absoluteY="160dp" />
+
+            <TextView
+                android:id="@+id/price_1"
+                style="@style/description"
+                android:layout_width="105dp"
+                android:layout_height="wrap_content"
+                tools:layout_editor_absoluteX="122dp"
+                tools:layout_editor_absoluteY="165dp" />
+        </LinearLayout>
+    </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@+id/rs_2"
-        app:layout_constraintTop_toBottomOf="@+id/rs_2"
-        android:layout_width="300dp">
-
-        <TextView
-            style="@style/description"
-            android:id="@+id/kind_2"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="165dp" />
-
-        <TextView
-            style="@style/description"
-            android:id="@+id/kitchen_2"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            tools:layout_editor_absoluteX="318dp"
-            tools:layout_editor_absoluteY="160dp" />
-
-        <TextView
-            style="@style/description"
-            android:id="@+id/price_2"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            tools:layout_editor_absoluteX="122dp"
-            tools:layout_editor_absoluteY="165dp" />
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/rs_3"
-        style="@style/boldString"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.128"
+        android:id="@+id/restautant2"
+        android:layout_width="330dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="232dp"
+        android:background="@drawable/borders"
+        android:orientation="vertical"
+        android:padding="10dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.329" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/rs_2"
+            style="@style/boldString"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.128"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.256" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="315dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/rs_2"
+            app:layout_constraintTop_toBottomOf="@+id/rs_2">
+
+            <TextView
+                android:id="@+id/kind_2"
+                style="@style/description"
+                android:layout_width="105dp"
+                android:layout_height="wrap_content"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="165dp" />
+
+            <TextView
+                android:id="@+id/kitchen_2"
+                style="@style/description"
+                android:layout_width="105dp"
+                android:layout_height="wrap_content"
+                tools:layout_editor_absoluteX="318dp"
+                tools:layout_editor_absoluteY="160dp" />
+
+            <TextView
+                android:id="@+id/price_2"
+                style="@style/description"
+                android:layout_width="105dp"
+                android:layout_height="wrap_content"
+                tools:layout_editor_absoluteX="122dp"
+                tools:layout_editor_absoluteY="165dp" />
+        </LinearLayout>
+    </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout3"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@+id/rs_3"
-        app:layout_constraintTop_toBottomOf="@+id/rs_3"
-        android:layout_width="300dp">
+        android:id="@+id/restautant3"
+        android:layout_width="330dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="326dp"
+        android:background="@drawable/borders"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            style="@style/description"
-            android:id="@+id/kind_3"
-            android:layout_width="100dp"
+            android:id="@+id/rs_3"
+            style="@style/boldString"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="165dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.128"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.329" />
 
-        <TextView
-            style="@style/description"
-            android:id="@+id/kitchen_3"
-            android:layout_width="100dp"
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="315dp"
             android:layout_height="wrap_content"
-            tools:layout_editor_absoluteX="318dp"
-            tools:layout_editor_absoluteY="160dp" />
+            app:layout_constraintStart_toStartOf="@+id/rs_3"
+            app:layout_constraintTop_toBottomOf="@+id/rs_3">
 
-        <TextView
-            style="@style/description"
-            android:id="@+id/price_3"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            tools:layout_editor_absoluteX="122dp"
-            tools:layout_editor_absoluteY="165dp" />
+            <TextView
+                android:id="@+id/kind_3"
+                style="@style/description"
+                android:layout_width="105dp"
+                android:layout_height="wrap_content"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="165dp" />
+
+            <TextView
+                android:id="@+id/kitchen_3"
+                style="@style/description"
+                android:layout_width="105dp"
+                android:layout_height="wrap_content"
+                tools:layout_editor_absoluteX="318dp"
+                tools:layout_editor_absoluteY="160dp" />
+
+            <TextView
+                android:id="@+id/price_3"
+                style="@style/description"
+                android:layout_width="105dp"
+                android:layout_height="wrap_content"
+                tools:layout_editor_absoluteX="122dp"
+                tools:layout_editor_absoluteY="165dp" />
+        </LinearLayout>
     </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/restautant4"
+        android:layout_width="330dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="426dp"
+        android:background="@drawable/borders"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
     <TextView
         android:id="@+id/rs_4"
@@ -171,14 +222,14 @@
     <LinearLayout
         android:id="@+id/linearLayout4"
         android:layout_height="wrap_content"
-        android:layout_width="300dp"
+        android:layout_width="315dp"
         app:layout_constraintStart_toStartOf="@+id/rs_4"
         app:layout_constraintTop_toBottomOf="@+id/rs_4">
 
         <TextView
             style="@style/description"
             android:id="@+id/kind_4"
-            android:layout_width="100dp"
+            android:layout_width="105dp"
             android:layout_height="wrap_content"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="165dp" />
@@ -186,7 +237,7 @@
         <TextView
             style="@style/description"
             android:id="@+id/kitchen_4"
-            android:layout_width="100dp"
+            android:layout_width="105dp"
             android:layout_height="wrap_content"
             tools:layout_editor_absoluteX="318dp"
             tools:layout_editor_absoluteY="160dp" />
@@ -194,13 +245,26 @@
         <TextView
             style="@style/description"
             android:id="@+id/price_4"
-            android:layout_width="100dp"
+            android:layout_width="105dp"
             android:layout_height="wrap_content"
             tools:layout_editor_absoluteX="122dp"
             tools:layout_editor_absoluteY="165dp" />
     </LinearLayout>
+    </LinearLayout>
 
-    <TextView
+    <LinearLayout
+        android:id="@+id/restautant5"
+        android:layout_width="330dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="526dp"
+        android:background="@drawable/borders"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
         android:id="@+id/rs_5"
         style="@style/boldString"
         android:layout_width="wrap_content"
@@ -215,14 +279,14 @@
     <LinearLayout
         android:id="@+id/linearLayout5"
         android:layout_height="wrap_content"
-        android:layout_width="300dp"
+        android:layout_width="315dp"
         app:layout_constraintStart_toStartOf="@+id/rs_5"
         app:layout_constraintTop_toBottomOf="@+id/rs_5">
 
         <TextView
             style="@style/description"
             android:id="@+id/kind_5"
-            android:layout_width="100dp"
+            android:layout_width="105dp"
             android:layout_height="wrap_content"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="165dp" />
@@ -230,7 +294,7 @@
         <TextView
             style="@style/description"
             android:id="@+id/kitchen_5"
-            android:layout_width="100dp"
+            android:layout_width="105dp"
             android:layout_height="wrap_content"
             tools:layout_editor_absoluteX="318dp"
             tools:layout_editor_absoluteY="160dp" />
@@ -238,11 +302,24 @@
         <TextView
             style="@style/description"
             android:id="@+id/price_5"
-            android:layout_width="100dp"
+            android:layout_width="105dp"
             android:layout_height="wrap_content"
             tools:layout_editor_absoluteX="122dp"
             tools:layout_editor_absoluteY="165dp" />
     </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/restautant6"
+        android:layout_width="330dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="626dp"
+        android:background="@drawable/borders"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
     <TextView
         android:id="@+id/rs_6"
@@ -259,14 +336,14 @@
     <LinearLayout
         android:id="@+id/linearLayout6"
         android:layout_height="wrap_content"
-        android:layout_width="300dp"
+        android:layout_width="315dp"
         app:layout_constraintStart_toStartOf="@+id/rs_6"
         app:layout_constraintTop_toBottomOf="@+id/rs_6">
 
         <TextView
             style="@style/description"
             android:id="@+id/kind_6"
-            android:layout_width="100dp"
+            android:layout_width="105dp"
             android:layout_height="wrap_content"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="165dp" />
@@ -274,7 +351,7 @@
         <TextView
             style="@style/description"
             android:id="@+id/kitchen_6"
-            android:layout_width="100dp"
+            android:layout_width="105dp"
             android:layout_height="wrap_content"
             tools:layout_editor_absoluteX="318dp"
             tools:layout_editor_absoluteY="160dp" />
@@ -282,11 +359,24 @@
         <TextView
             style="@style/description"
             android:id="@+id/price_6"
-            android:layout_width="100dp"
+            android:layout_width="105dp"
             android:layout_height="wrap_content"
             tools:layout_editor_absoluteX="122dp"
             tools:layout_editor_absoluteY="165dp" />
     </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/restautant7"
+        android:layout_width="330dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="726dp"
+        android:background="@drawable/borders"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
     <TextView
         android:id="@+id/rs_7"
@@ -303,14 +393,14 @@
     <LinearLayout
         android:id="@+id/linearLayout7"
         android:layout_height="wrap_content"
-        android:layout_width="300dp"
+        android:layout_width="315dp"
         app:layout_constraintStart_toStartOf="@+id/rs_7"
         app:layout_constraintTop_toBottomOf="@+id/rs_7">
 
         <TextView
             style="@style/description"
             android:id="@+id/kind_7"
-            android:layout_width="100dp"
+            android:layout_width="105dp"
             android:layout_height="wrap_content"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="165dp" />
@@ -318,7 +408,7 @@
         <TextView
             style="@style/description"
             android:id="@+id/kitchen_7"
-            android:layout_width="100dp"
+            android:layout_width="105dp"
             android:layout_height="wrap_content"
             tools:layout_editor_absoluteX="318dp"
             tools:layout_editor_absoluteY="160dp" />
@@ -326,55 +416,11 @@
         <TextView
             style="@style/description"
             android:id="@+id/price_7"
-            android:layout_width="100dp"
+            android:layout_width="105dp"
             android:layout_height="wrap_content"
             tools:layout_editor_absoluteX="122dp"
             tools:layout_editor_absoluteY="165dp" />
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/rs_8"
-        style="@style/boldString"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.128"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.689" />
-
-    <LinearLayout
-        android:id="@+id/linearLayout8"
-        android:layout_height="wrap_content"
-        android:layout_width="300dp"
-        app:layout_constraintStart_toStartOf="@+id/rs_8"
-        app:layout_constraintTop_toBottomOf="@+id/rs_8">
-
-        <TextView
-            style="@style/description"
-            android:id="@+id/kind_8"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="165dp" />
-
-        <TextView
-            style="@style/description"
-            android:id="@+id/kitchen_8"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            tools:layout_editor_absoluteX="318dp"
-            tools:layout_editor_absoluteY="160dp" />
-
-        <TextView
-            style="@style/description"
-            android:id="@+id/price_8"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            tools:layout_editor_absoluteX="122dp"
-            tools:layout_editor_absoluteY="165dp" />
     </LinearLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
