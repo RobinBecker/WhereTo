@@ -40,6 +40,7 @@
     <string name="restaurant_name">Restaurant Name</string>
     <string name="strasse">Straße</string>
     <string name="plz_und_stadt">PLZ und Stadt</string>
+    <string name="beliebig">beliebig</string>
     <string name="open" />
     <string-array name="art_array">
         <item>beliebig</item>
@@ -52,9 +53,11 @@
         <item>mittel</item>
         <item>hoch</item>
     </string-array>
+    <string name="api_key">AIzaSyBv0Au4qoo8l26E5KJ1nQA_TY_8RGCocg8</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="restaurant_liste">Restaurant Liste</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
