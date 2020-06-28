@@ -8,15 +8,15 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
-import com.google.android.gms.maps.CameraUpdateFactory
-import com.google.android.gms.maps.GoogleMapOptions
-import com.google.android.gms.maps.MapView
+import com.google.android.gms.maps.*
 import com.google.android.gms.maps.model.CameraPosition
 import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.MarkerOptions
 import de.robinbecker.whereto.entities.Restaurant
 
 
-class RestaurantDetail : Fragment() {
+class RestaurantDetail : Fragment(), OnMapReadyCallback {
+    private var googleMap: GoogleMap? = null
     companion object {
         fun newInstance() = RestaurantDetail()
     }
@@ -42,8 +42,10 @@ class RestaurantDetail : Fragment() {
                 ort.append(random.plz + " " + random.location)
             }
         }
+
         val mapView: MapView = view.findViewById(R.id.mapView)
         mapView.onCreate(savedInstanceState)
+        
 
         return view
     }
@@ -54,4 +56,22 @@ class RestaurantDetail : Fragment() {
         // TODO: Use the ViewModel
     }
 
+     override fun onMapReady(p0: GoogleMap?) {
+        googleMap=p0
+
+        //Adding markers to map
+
+        val latLng=LatLng(28.6139,77.2090)
+        val markerOptions:MarkerOptions = MarkerOptions().position(latLng).title("New Delhi")
+
+        // moving camera and zoom map
+
+        val zoomLevel = 12.0f //This goes up to 21
+
+
+        googleMap.let {
+            it!!.addMarker(markerOptions)
+            it.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, zoomLevel))
+        }
+    }
 }
