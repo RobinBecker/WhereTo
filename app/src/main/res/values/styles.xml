@@ -75,6 +75,13 @@
         <item name="android:textColor">@color/colorSecondary</item>
     </style>
 
+    <style name="boldString">
+        <item name="android:fontFamily">@font/fonts</item>
+        <item name="android:fontStyle">italic</item>
+        <item name="android:textSize">8pt</item>
+        <item name="android:textColor">@color/colorSecondary</item>
+    </style>
+
     <style name="dropdown_text">
         <item name="android:fontFamily">@font/fonts</item>
         <item name="android:fontStyle">normal</item>

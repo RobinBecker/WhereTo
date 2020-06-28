@@ -35,6 +35,10 @@
                         android:id="@+id/impressium"
                         android:title="@string/impressium"
                         app:showAsAction="always"/>
+                    <item
+                        android:id="@+id/logout"
+                        android:title="@string/logout"
+                        app:showAsAction="always"/>
                 </group>
             </menu>
         </item>

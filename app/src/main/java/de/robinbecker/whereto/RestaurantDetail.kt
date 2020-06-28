@@ -8,10 +8,13 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
+
 import com.google.android.gms.maps.*
 import com.google.android.gms.maps.model.CameraPosition
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
+import com.google.android.gms.maps.MapView
+
 import de.robinbecker.whereto.entities.Restaurant
 
 
@@ -23,6 +26,8 @@ class RestaurantDetail : Fragment(), OnMapReadyCallback {
 
     private lateinit var viewModel: RestaurantDetailViewModel
     lateinit var restaurants: List<Restaurant>
+    private lateinit var kind: String
+    private lateinit var price: String
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -30,17 +35,30 @@ class RestaurantDetail : Fragment(), OnMapReadyCallback {
     ): View? {
         val view: View = inflater.inflate(R.layout.activity_restaurant_detail, container, false)
         val db = activity?.let { AccountRoomDatabase.getDatabase(it) }!!
+
+        kind = if (HomeActivity.kind != "beliebig"){
+            HomeActivity.kind
+        } else {
+            "%"
+        }
+
+        price = if (HomeActivity.price != "beliebig"){
+            HomeActivity.price
+        } else {
+            "%"
+        }
+
         AsyncTask.execute {
             run {
-                restaurants = db.whereToDAO().getAllRestaurants()
-                val random = restaurants.random()
-                val name: TextView = view.findViewById(R.id.restaurant_name)
-                val strasse: TextView = view.findViewById(R.id.restaurant_strasse)
-                val ort: TextView = view.findViewById(R.id.restaurant_plz)
-                name.append(random.name)
-                strasse.append(random.street)
-                ort.append(random.plz + " " + random.location)
+                restaurants = db.whereToDAO().getFilteredRestaurants(kind, price)
             }
+            val random = restaurants.random()
+            val name: TextView = view.findViewById(R.id.restaurant_name)
+            val strasse: TextView = view.findViewById(R.id.restaurant_strasse)
+            val ort: TextView = view.findViewById(R.id.restaurant_plz)
+            name.append(random.name)
+            strasse.append(random.street)
+            ort.append(random.plz + " " + random.location)
         }
 
         val mapView: MapView = view.findViewById(R.id.mapView)
@@ -67,7 +85,6 @@ class RestaurantDetail : Fragment(), OnMapReadyCallback {
         // moving camera and zoom map
 
         val zoomLevel = 12.0f //This goes up to 21
-
 
         googleMap.let {
             it!!.addMarker(markerOptions)
