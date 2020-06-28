@@ -3,20 +3,9 @@ package de.robinbecker.whereto
 import de.robinbecker.whereto.entities.Restaurant
 
 class InitData() {
-    private val restaurant1 = Restaurant(
-        1,
-        "Burger Hut",
-        "0721-234567",
-        "Kaiserstraße 10",
-        "76133",
-        "Karlsruhe",
-        "niedrig",
-        "beliebig",
-        "deutsch"
-    )
 
     private val restaurant2 = Restaurant(
-        2,
+        1,
         "Vapiano",
         "0721-234567",
         "Kaiserstraße 10",
@@ -24,10 +13,10 @@ class InitData() {
         "Karlsruhe",
         "mittel",
         "vegetarisch",
-        "spanisch"
+        "italienisch"
     )
     private val restaurant3 = Restaurant(
-        3,
+        2,
         "Asia Grill",
         "0721-234567",
         "Kaiserstraße 10",
@@ -38,7 +27,7 @@ class InitData() {
         "asiatisch"
     )
     private val restaurant4 = Restaurant(
-        4,
+        3,
         "Zum Hirsch",
         "0721-234567",
         "Kaiserstraße 10",
@@ -49,7 +38,7 @@ class InitData() {
         "deutsch"
     )
     private val restaurant5 = Restaurant(
-        5,
+        4,
         "Kebabi",
         "0721-234567",
         "Kaiserstraße 10",
@@ -60,7 +49,7 @@ class InitData() {
         "türkisch"
     )
     private val restaurant6 = Restaurant(
-        6,
+        5,
         "Besitos",
         "0721-234567",
         "Kaiserstraße 10",
@@ -71,7 +60,7 @@ class InitData() {
         "spanisch"
     )
     private val restaurant7 = Restaurant(
-        7,
+        6,
         "Enchilada",
         "0721-234567",
         "Kaiserstraße 10",
@@ -83,7 +72,7 @@ class InitData() {
     )
 
     private val restaurant8 = Restaurant(
-        8,
+        7,
         "Vegano",
         "0721-234567",
         "Kaiserstraße 10",
@@ -101,7 +90,6 @@ class InitData() {
             database.clearAllTables()
 
             // Restaurants anlegen
-            database.whereToDAO().insertRestaurant(restaurant1)
             database.whereToDAO().insertRestaurant(restaurant2)
             database.whereToDAO().insertRestaurant(restaurant3)
             database.whereToDAO().insertRestaurant(restaurant4)
