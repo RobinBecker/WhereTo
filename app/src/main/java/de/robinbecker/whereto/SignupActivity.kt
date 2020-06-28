@@ -22,24 +22,26 @@ class SignupActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_registriere)
+        setContentView(R.layout.activity_login)
 
         auth = FirebaseAuth.getInstance()
 
-        emailEt = findViewById(R.id.email)
-        passwordEt = findViewById(R.id.passwort)
+        emailEt = findViewById(R.id.input_email)
+        passwordEt = findViewById(R.id.input_passwort)
 
 
-        signUpBtn = findViewById(R.id.btn_registriere)
+        signUpBtn = findViewById(R.id.btn_registrieren)
+        loginBtn = findViewById(R.id.btn_login)
 
         signUpBtn.setOnClickListener{
-            var email: String = emailEt.text.toString()
-            var password: String = passwordEt.text.toString()
+            val email: String = emailEt.text.toString()
+            val password: String = passwordEt.text.toString()
 
             if(TextUtils.isEmpty(email) || TextUtils.isEmpty(password)) {
                 Toast.makeText(this, "Please fill all the fields", Toast.LENGTH_LONG).show()
             } else{
-                auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this, OnCompleteListener{ task ->
+                auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this
+                ) { task ->
                     if(task.isSuccessful){
                         Toast.makeText(this, "Successfully Registered", Toast.LENGTH_LONG).show()
                         val intent = Intent(this, MainActivity::class.java)
@@ -48,7 +50,7 @@ class SignupActivity : AppCompatActivity() {
                     }else {
                         Toast.makeText(this, "Registration Failed", Toast.LENGTH_LONG).show()
                     }
-                })
+                }
             }
         }
 

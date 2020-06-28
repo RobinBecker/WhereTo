@@ -23,8 +23,6 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var signupBtn: Button
     private lateinit var loginBtn: Button
 
-    private lateinit var resetPasswordTv: TextView
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -38,13 +36,13 @@ class LoginActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
 
         loginBtn.setOnClickListener {
-            var email: String = emailEt.text.toString()
-            var password: String = passwordEt.text.toString()
+            val email: String = emailEt.text.toString()
+            val password: String = passwordEt.text.toString()
 
             if(TextUtils.isEmpty(email) || TextUtils.isEmpty(password)) {
                 Toast.makeText(this@LoginActivity, "Please fill all the fields", Toast.LENGTH_LONG).show()
             } else{
-                auth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this, OnCompleteListener { task ->
+                auth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this) { task ->
                     if(task.isSuccessful) {
                         Toast.makeText(this, "Successfully Logged In", Toast.LENGTH_LONG).show()
                         val intent = Intent(this, MainActivity::class.java)
@@ -53,7 +51,7 @@ class LoginActivity : AppCompatActivity() {
                     }else {
                         Toast.makeText(this, "Login Failed", Toast.LENGTH_LONG).show()
                     }
-                })
+                }
             }
         }
 
@@ -61,11 +59,6 @@ class LoginActivity : AppCompatActivity() {
             val intent = Intent(this, SignupActivity::class.java)
             startActivity(intent)
             finish()
-        }
-
-        resetPasswordTv.setOnClickListener{
-            val intent = Intent(this, ForgotPasswordActivity::class.java)
-            startActivity(intent)
         }
     }
 }

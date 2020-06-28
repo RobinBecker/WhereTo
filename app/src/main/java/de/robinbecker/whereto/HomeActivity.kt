@@ -1,6 +1,7 @@
 package de.robinbecker.whereto
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.*
@@ -10,6 +11,7 @@ import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
+import com.google.firebase.auth.FirebaseAuth
 
 
 @SuppressLint("Registered")
@@ -66,6 +68,12 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             }
             R.id.nav_rating -> {
                 Toast.makeText(this, "Rating clicked", Toast.LENGTH_SHORT).show()
+            }
+            R.id.logout -> {
+                FirebaseAuth.getInstance().signOut()
+                val intent = Intent(this, LoginActivity::class.java)
+                startActivity(intent)
+                finish()
             }
         }
         drawerLayout.closeDrawer(GravityCompat.START)

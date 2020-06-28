@@ -22,10 +22,10 @@ class MainActivity() : AppCompatActivity() {
             startActivity(intent)
             finish()
         }else{
-            Toast.makeText(this, "Already logged in", Toast.LENGTH_LONG).show()
+            val home = Intent(this, HomeActivity::class.java)
+            startActivity(home)
+            finish()
         }
-
-        setContentView(R.layout.activity_login)
     }
 
 }
